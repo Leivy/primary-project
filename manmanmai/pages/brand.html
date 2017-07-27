@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>zybrand</title>
+  <!--flexible css初始化 rem布局-->
+  <script src="../lib/flexible/flexible_css.js"></script>
+  <!--flexoible 适配插件-->
+  <script src="../lib/flexible/flexible.js"></script>
+  
+  <!--引入css文件-->
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/brand.css">
+  
+  <!--引入js文件-->
+  <script src="../lib/art/template.js"></script>
+</head>
+<body>
+<!--页面头部-->
+<div class="mtop" id="toTop"></div>
+
+
+<!--三级导航栏-->
+<div class="pronav">
+  <a href="index.html">首页</a><span> > </span>
+  <a href="brandTitle.html">品牌大全</a><span> > </span>
+  <a href="JavaScript:;">十大品牌</a>
+</div>
+
+<!--页面身体-->
+<div class="rank">
+  
+  <!--brand rank list-->
+  <div class="head"><h3>十大品牌哪个牌子好</h3></div>
+  <div class="brandrank">
+    <ul>
+      <script type="text/html" id="rankTemp">
+        {{each result as v i}}
+        <li data-brandTitleId={{v.brandTitleId}} data-brandId="{{v.brandId}}" data-categoryId="{{v.categoryId}}">
+          <a href="javascript:;">
+            <!--标题序号用数组下标来做-->
+            <h3><span>{{i+1}}</span></h3>
+            <p>{{v.brandName}}</p>
+            <p class="txtdetail">{{v.brandInfo}}</p>
+          </a>
+        </li>
+        {{/each}}
+      </script>
+    </ul>
+  </div>
+  
+  <!--product rank list-->
+  <div class="head"><h3>热销产品销量排行</h3></div>
+  <div class="prorank">
+    <ul>
+      <script type="text/html" id="prolistTemp">
+        {{each result as v i}}
+        <li data-categoryid="{{v.categoryId}}" data-productid="{{v.productId}}" data-productlistid="{{v.productListId}}">
+          <a href="categorylistdetails.html?productid={{v.productId}}">
+            <!--product picture-->
+            <div class="pic">
+              {{#v.productImg}}
+            </div>
+            <!--product information-->
+            <div class="protxt">
+              <h5>{{i}}</h5>
+              <span>{{v.productPrice}}</span>
+              <span>{{v.productQuote}}</span>
+              <span>{{v.productCom}}</span>
+            </div>
+          </a>
+        </li>
+        {{/each}}
+      </script>
+  
+    </ul>
+  </div>
+  
+  <!--comment rank list-->
+  <div class="head"><h3>热销产品最新评论</h3></div>
+  <div class="commentrank">
+    <ul >
+      <script type="text/html" id="comproTemp">
+        {{each result as v i}}
+        <li data-productid="{{v.productId}}" data-productlistid="{{v.productListId}}" class="mark">
+          <a href="categorylistdetails.html?productid={{v.productId}}">
+            <!--product picture-->
+            <div class="pic">
+              {{#v.productImg}}
+            </div>
+            <!--product information-->
+            <div class="protxt">
+              <h5>{{v.productName}}</h5>
+            </div>
+          </a>
+        </li>
+        <li class="comtolink"></li>
+        {{/each}}
+      </script>
+    </ul>
+    <!--test-->
+    
+      <script type="text/html" id="commentTemp">
+        <ul class="commentcolor">
+        {{each result as v i}}
+        <li data-comid="{{v.comId}}">
+          <div class="head">
+            <span>{{v.comName}}</span>
+            <span>{{v.comTime}}</span>
+            <span>{{v.comFrom}}</span>
+          </div>
+          <div class="txt">
+            <p>{{v.comContent}}</p>
+          </div>
+        </li>
+        {{/each}}
+        </ul>
+      </script>
+    
+  </div>
+</div>
+
+
+<!--页面尾部-->
+<div class="mfooter"></div>
+
+
+<script src="../lib/jquery/jquery-1.12.0.js"></script>
+<script src="../lib/art/template.js"></script>
+<script src="../js/brand.js"></script>
+<script>
+  $(".mtop").load("header.html");
+  $(".mfooter").load("footer.html");
+</script>
+</body>
+</html>

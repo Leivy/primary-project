@@ -1,0 +1,65 @@
+@charset "UTF-8";
+@import "base";
+@import "iconfont";
+@import "header";
+@import "footer";
+
+//三级导航
+.pronav{
+  height: 70 *@rem;
+  line-height: 70 *@rem;
+  padding-left: 20 *@rem;
+  background-color: #5a5a5a;
+  a{
+    color:#fff;
+    .font-size(16);
+  }
+  span{
+    color:#fff;
+    padding:10 *@rem;
+    .font-size(18);
+  }
+}
+//品牌标题列表
+.brandtitle{
+  h3{
+    height: 60 *@rem;
+    line-height: 60*@rem;
+    color:#874604;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 2px #ddd;
+    background-color: #eee;
+    .font-size(16);
+    padding-left: 20 *@rem;
+  }
+  .brandlist{
+    margin-top: 20 *@rem;
+    border: 1px solid #ddd;
+    background-color: #eee;
+  }
+  li{
+    //height: 60 *@rem;
+    padding-left:20 *@rem;
+    padding-right:20 *@rem;
+    position: relative;
+    a{
+      display: block;
+      height: 80 *@rem;
+      line-height: 80 *@rem;
+      border-bottom: 1px solid #ddd;
+      .font-size(16);
+      font-weight:700;
+    }
+    //向下的小图标  精灵图
+    &:before{
+      content:'';
+      display: block;
+      position: absolute;
+      right: 40 *@rem;
+      top: 50%;
+      width: 30 *@rem;
+      height: 16 *@rem;
+      background: url(../images/icon_bar.png) no-repeat -352px 0;
+    }
+  }
+}

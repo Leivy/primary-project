@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <!--flexible css初始化 rem布局-->
+  <script src="../lib/flexible/flexible_css.js"></script>
+  <!--flexoible 适配插件-->
+  <script src="../lib/flexible/flexible.js"></script>
+  
+  <!--引入css文件-->
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/gsproduct.css">
+  
+  <!--引入js文件-->
+  <script src="../lib/art/template.js"></script>
+</head>
+<body>
+<!--顶部通栏-->
+<div class="mtop" id="toTop"></div>
+
+<!--主体商品列表-->
+  <!--head-->
+  <div class="gshead">
+    <!--click box-->
+    <div class="clickbox">
+      <div class="jd"><a href="javascript:;">京东</a><i></i></div>
+      <div class="location"><a href="javascript:;">华北</a><i></i></div>
+      <div class="price"><a href="javascript:;">全部价格</a><i></i></div>
+    </div>
+    <!--select box-->
+    <div class="selectbox ">
+      <div class="jdbox hide">
+          <ul>
+          <script type="text/html" id="jdbox">
+            {{each result as v i}}
+            <li data-shopid={{v.shopId}}>{{v.shopName}}</li>
+            {{/each}}
+          </script>
+        </ul>
+      </div>
+      <div class="locationbox  hide">
+        <ul>
+          <script type="text/html" id="locationbox">
+            {{each result as v i}}
+            <li data-areaid={{v.areaId}}>{{v.areaName}}</li>
+            {{/each}}
+          </script>
+        </ul>
+      </div>
+      <div class="pricebox  hide ">
+        <ul>
+          <li>全部价格</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--body-->
+  <div class="gsbody">
+    <ul class="clearfix">
+  
+      <script type="text/html" id="gsprolist">
+        {{each result as v i}}
+        <li data-productid="{{v.productId}}" class="fl">
+          <a href="javascript:;">
+            <img src="{{v.productImg}}" alt="">
+            <p>{{v.productName}}</p>
+            <h5>{{v.productPrice}}</h5>
+            <div class="more">去凑单</div>
+          </a>
+        </li>
+        {{/each }}
+      </script>
+      
+      
+    </ul>
+  </div>
+
+
+<!--页面底部-->
+<div class="mfooter"></div>
+
+
+<script src="../lib/jquery/jquery-1.12.0.js"></script>
+<script src="../lib/art/template.js"></script>
+<script src="../js/gsproduct.js"></script>
+<script>
+  window.onload=function () {
+    $(".mtop").load("backheader.html",function () {
+      $(".mtop .mheader span").html("zy凑单品");
+    });
+    $(".mfooter").load("footer.html");
+  }
+</script>
+</body>
+</html>

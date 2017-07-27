@@ -1,0 +1,131 @@
+@charset "UTF-8";
+@import "base";
+@import "iconfont";
+@import "header";
+@import "footer";
+//页面头部
+.mtop{
+  height: 98*@rem;
+  //页面最顶部
+  .mheader{
+    height: 98 *@rem;
+    line-height: 98 *@rem;
+    text-align: center;
+    color:#fff;
+    .font-size(20);
+    font-weight:700;
+    background-color: @mcolor;
+    a{
+      display: block;
+      height: 100%;
+      padding: 22 *@rem 30 *@rem;;
+      img{
+        height: 100%;
+        width: 100%;
+      }
+      .app{
+        height: 100%;
+        width:auto;
+      }
+    }
+    span{
+
+    }
+  }
+  
+}
+
+//页面底部分页
+.paging{
+  height: 90 *@rem;
+  line-height: 90 *@rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding:20 *@rem 10 *@rem;
+  a{
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .page{
+    width: 33.33%;
+    display: flex;
+    select{
+      margin:  auto;
+      width: 150 *@rem;
+      height: 100%;
+      .font-size(16);
+    }
+  }
+  .pre,
+  .next{
+    height: 50 *@rem ;
+    width: 33.33%;
+    background:linear-gradient(to bottom, #f1f1f1, #d4d4d4);
+    text-align: center;
+    line-height: 50 *@rem;
+    border-radius:5 *@rem;
+    .font-size(14);
+  }
+}
+
+//主体商品列表
+.money{
+  li{
+    height: 256 *@rem;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    padding: 25 *@rem;
+    position: relative;
+    img{
+      width: 200 *@rem;
+      height: 200*@rem;
+    }
+    .left{
+      position: absolute;
+      top: 25*@rem;
+      left: 25*@rem;
+    }
+    .right{
+      height: 100%;
+      margin-left: 225  *@rem;
+      position: relative;
+      .font-size(16);
+      h5{
+        display: inline-block;
+      }
+      span.price{
+        color:red;
+      }
+      p{
+        position: absolute;
+        bottom: 20 *@rem;
+        left: 0;
+        .font-size(12);
+        color: @font-color;
+      }
+      .comment{
+        display: block;
+        position: absolute;
+        bottom: 20 *@rem;
+        right: 0;
+
+        i{
+          display: inline-block;
+          width: 25 *@rem;
+          height: 25*@rem;
+          background: url("../images/comment.svg") no-repeat;
+          background-size: 100%;
+          float: left;
+          margin-right: 10 *@rem;
+        }
+        span{
+          .font-size(12);
+          color: @font-color;
+          float: left;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,134 @@
+@charset "UTF-8";
+@import "base";
+@import "iconfont";
+@import "header";
+@import "footer";
+//标题
+.pronav{
+  height: 70 *@rem;
+  line-height: 70 *@rem;
+  padding-left: 20 *@rem;
+  background-color: #5a5a5a;
+  a{
+    color:#fff;
+    .font-size(16);
+  }
+  span{
+    color:#fff;
+    padding:10 *@rem;
+    .font-size(18);
+  }
+}
+
+//商品详情
+.prolistpic{
+  height: 450 *@rem;
+  background-color: #fff;
+  padding: 20 *@rem 0;
+  img{
+    margin: 0 auto;
+    width: 330*@rem;
+    height: 330*@rem;
+  }
+  h5{
+    .font-size(16);
+    height: 90 *@rem;
+    line-height: 130 *@rem;
+    padding-left: 20 *@rem;
+    color:@font-color;
+  }
+}
+//buy nav
+.buyNav{
+  display: flex;
+  justify-content: space-between;
+  a{
+    display: inline-block;
+    height: 80 *@rem;
+    width: 33.33%;
+    border: 1px solid @mcolor;
+    background:-webkit-gradient(linear, 0 0, 0 100%, from(#ffd050), to(#ffbb00));
+    text-align: center;
+    line-height: 80 *@rem;
+    color:#fff;
+    .font-size(14);
+  }
+  a.active,
+  a:hover{
+    background:-webkit-gradient(linear, 0 0, 0 100%, from(#ffa632), to(#ff9000));
+  }
+}
+//price
+#price{
+  height: 80 *@rem;
+  padding: 20 *@rem;
+  border-bottom: 2px solid #999;
+}
+//net content
+.webcontent{
+
+  .con-title{
+    height: 64 *@rem;
+    line-height: 64 *@rem;
+    text-align: center;
+    background-color: #ccc;
+    h3{
+      .font-size(20);
+      color:#000;
+    }
+  }
+//net  content
+  .con-body{
+    padding: 20 *@rem;
+    .head{
+    height: 110 *@rem;
+    position: relative;
+    span{
+      position: absolute;
+    }
+    span:nth-child(1){
+      top: 20*@rem;
+      left: 20*@rem;
+    }
+    span:nth-child(2){
+      top: 20*@rem;
+      right: 20*@rem;
+    }
+    span:nth-child(3){
+      bottom: 20*@rem;
+      right: 20*@rem;
+    }
+  }
+    .txt {
+      p{
+        letter-spacing: 2 *@rem;
+        line-height: 200%;
+        border-bottom: 1px solid #ccc;
+        padding-bottom:40 *@rem;
+      }
+    }
+  }
+
+
+}
+
+//more content
+.moreCon{
+  height: 145 *@rem;
+  padding: 31*@rem 16*@rem 48*@rem;
+  a{
+    height: 61 *@rem;
+    display: block;
+    text-align: center;
+    line-height: 61 *@rem;
+    .font-size(16);
+    color:#000;
+    border: 1px solid #999;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+    border-radius:5 *@rem;
+  }
+
+}
+li{
+  //list-style: none!important;
+}

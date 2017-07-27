@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <!--flexible css初始化 rem布局-->
+  <script src="../lib/flexible/flexible_css.js"></script>
+  <!--flexoible 适配插件-->
+  <script src="../lib/flexible/flexible.js"></script>
+  
+  <!--引入css文件-->
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/categorylistdetails.css">
+  
+  <!--引入js文件-->
+  <script src="../lib/art/template.js"></script>
+</head>
+<body>
+<!--页面头部-->
+<div class="mtop" id="toTop"></div>
+
+
+<!--页面身体-->
+<div class="productlist">
+  <!--title-->
+  <div class="pronav">
+    <a href="index.html">首页</a><span> > </span>
+    <a href="" id="secondlink"></a><span> > </span>
+    <a href="javascript:;" id="thirdlink"></a>
+  </div>
+  <!--main picture-->
+  <div class="prolistpic">
+    <script type="text/html" id="prolistpic">
+      {{#result[0].productImg}}
+      <!--<img src="images/del3.jpg" alt="">-->
+      <h5>{{result[0].productName}}</h5>
+    </script>
+  
+  </div>
+  <!--buy nav-->
+  <div class="buyNav">
+    <a class=" active">比价购买</a>
+    <a>产品参数</a>
+    <a>优选评价</a>
+  </div>
+  <!--price-->
+  <div id="price">
+    <script type="text/html" id="priceTemp">
+      {{#result[0].bjShop}}
+    </script>
+  </div>
+  <!--net  content-->
+  <div class="webcontent">
+    <div class="con-title">
+      <h3>网友评论</h3>
+    </div>
+    <div class="con-body">
+      <ul>
+        <li>
+          <div class="head">
+            <span>咖啡虎</span>
+            <span>2016/1/3</span>
+            <span>购买自:京东商城</span>
+          </div>
+          <div class="txt">
+            <p>送货很快,全新未拆封,总之是部正经机子 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium autem eaque eum
+              in ipsa ipsam iusto magni minima molestias nihil, placeat recusandae repellat sapiente, sit, tenetur ut
+              voluptate voluptatum. Iusto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
+              consequuntur eius, ex fuga ipsa ipsum, laudantium nemo nulla odit possimus, quasi quo repellat sed?
+              Accusamus assumenda commodi distinctio magnam qui!</p>
+          </div>
+        </li>
+        <script type="text/html" id="netConTemp">
+          {{each result as v i}}
+          <li data-comid="{{v.comId}}">
+            <div class="head">
+              <span>{{v.comName}}</span>
+              <span>{{v.comTime}}</span>
+              <span>{{v.comFrom}}</span>
+            </div>
+            <div class="txt">
+              <p>{{v.comContent}}</p>
+            </div>
+          </li>
+        {{/each}}
+        </script>
+      </ul>
+    </div>
+  
+  </div>
+  <!--more content-->
+  <div class="moreCon">
+    <a href="javascript:;">查看更多评价 >></a>
+  </div>
+</div>
+
+
+
+<!--页面尾部-->
+<div class="mfooter"></div>
+
+
+<script src="../lib/jquery/jquery-1.12.0.js"></script>
+<script src="../lib/art/template.js"></script>
+<script src="../js/categorylistdetails.js"></script>
+<script>
+  $(".mtop").load("header.html");
+  $(".mfooter").load("footer.html");
+</script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+@charset "UTF-8";
+@import "base";
+@import "iconfont";
+@import "backheader";
+@import "footer";
+
+//页面内容
+//head
+.sale{
+  padding:16 *@rem;
+  .head{
+    //margin-bottom: 20 *@rem;
+    h3{
+      .font-size(18);
+      color:#000;
+      font-weight: 700;
+      height: 60 *@rem;
+      line-height: 60 *@rem;
+    }
+    p{
+      color:red;
+    }
+  }
+  .info{
+    margin: 25 *@rem;
+    span{
+      padding-right: 15 *@rem;
+      color: @font-color;
+    }
+    a:nth-child(4){
+      color:#4682c5;
+    }
+  }
+  .con{
+    p{
+
+    }
+    img{
+      margin: 10 *@rem auto;
+    }
+  }
+  .city{
+    ul{
+      border: 1px solid #ccc;
+      width: 272 *@rem;
+      margin: 0 auto;
+
+    }
+    li{
+      width: 272 *@rem;
+      height: 38 *@rem;
+      border-bottom: 1px dashed #ccc;
+      padding:5 *@rem 50 *@rem;
+      span:last-child{
+        color:#f27b04;
+      }
+    }
+    li:last-child{
+      border: none;
+    }
+  }
+
+}
+.saleTwo{
+  .golink{
+    margin: 20 *@rem;
+    border-radius:5 *@rem;
+    overflow: hidden;
+    a{
+      display: block;
+      height: 58*@rem;
+      line-height: 58 *@rem;
+      text-align: center;
+      color:#fff;
+      .font-size(16);
+      background-color: @mcolor;
+    }
+  }
+
+  /* 评论区 样式太恶心了不想写 */
+  .comment {
+    .tit {
+      .font-size(16);
+      padding: 12*@rem 12*@rem;
+      line-height: 60*@rem;
+    }
+    /* 发表评论 */
+    .reply {
+      .form {
+        width: 100%;
+        border: 2px solid #ECEAE8;
+        border-radius: 4*@rem;
+        padding-top: 8*@rem;
+        padding-left: 8*@rem;
+        textarea {
+          width: 100%;
+          resize: none;
+          border: none;
+          height: 140*@rem;
+          line-height: 44*@rem;
+          .font-size(14);
+        }
+      }
+      .ctrl {
+        background: #fbfbfb;
+        height: 72*@rem;
+        margin-left: -8*@rem;
+        position: relative;
+        input {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          background: #ff841d;
+          border: 2px solid #ff841d;
+          width: 200*@rem;
+          height: 72*@rem;
+          border-radius: 4*@rem;
+          color: white;
+          .font-size(16);
+        }
+      }
+    }
+    .list {
+      width: 100%;
+      ul {
+        width: 100%;
+      }
+      li {
+        padding: 36*@rem 20*@rem;
+      }
+      .userimg {
+        width: 80*@rem;
+        float: left;
+        overflow: hidden;
+        img {
+          width: 80*@rem;
+          height: 80*@rem;
+          border-radius: 40*@rem;
+        }
+      }
+      .con {
+        padding-left: 20*@rem;
+        overflow: hidden;
+      }
+      .name {
+        padding-bottom: 12*@rem;
+      }
+      .username {
+        color : #5997c0;
+        .font-size(12);
+        float: left;
+      }
+      .time {
+        text-align: right;
+        float: right;;
+      }
+      .content {
+        word-break: break-all;
+        .font-size(14);
+        color: #606060;
+        line-height: 40*@rem;
+      }
+    }
+  }
+}
+body{
+  background-color: #fff;
+}

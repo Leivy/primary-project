@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <!--flexible css初始化 rem布局-->
+  <script src="../lib/flexible/flexible_css.js"></script>
+  <!--flexoible 适配插件-->
+  <script src="../lib/flexible/flexible.js"></script>
+  
+  <!--引入css文件-->
+  <link rel="stylesheet" href="../css/inlandproduct.css">
+  
+  <!--引入js文件-->
+  <script src="../lib/art/template.js"></script>
+</head>
+<body>
+<!--顶部返回栏-->
+<div class="mtop" id="toTop"></div>
+
+<!--页面内容-->
+<div class="inlandproduct">
+  
+  <script type="text/html" id="inlandproduct">
+    <!--head-->
+    <div class="head">
+      <h3>{{result[0].productName}}</h3>
+      <p>{{result[0].productPinkage}}</p>
+    </div>
+    <!--info-->
+    <div class="info">
+      <span>{{result[0].productFrom}}</span>
+      <span>{{result[0].productTime}}</span>
+      <span>{{result[0].productTips}}</span>
+      <a href="javascript:;">{{result[0].productComCount}}</a>
+    </div>
+    <!--content-->
+    <div class="con">
+      <p>{{result[0].productInfo}}</p>
+      <div class="pic">
+        {{#result[0].productImg}}
+      </div>
+    </div>
+    <!--city has product-->
+    <div class="city">
+      <!--<ul>
+        <li>
+          <a href="javascript:;">
+            <span class="fl">北京</span>
+            <span class="fr">有货</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <span class="fl">北京</span>
+            <span class="fr">有货</span>
+          </a>
+        </li>
+      </ul>-->
+      {{#result[0].productCity}}
+    </div>
+  
+  </script>
+
+</div>
+
+<!--剩余不用渲染的结构-->
+<div class="inlandproductTwo">
+  <!--go buy link-->
+  <div class="golink">
+    <a href="javascript:;">前往购买</a>
+  </div>
+  <!--net comment-->
+  <div class="comment">
+    <script type="text/html" id="comment">
+      {{#result[0].productComment}}
+    </script>
+  </div>
+</div>
+
+
+
+<!--页面底部-->
+<div class="mfooter"></div>
+
+<script src="../lib/jquery/jquery-1.12.0.js"></script>
+<script src="../lib/art/template.js"></script>
+<script src="../js/inlandproduct.js"></script>
+<script>
+  window.onload=function () {
+    $(".mtop").load("backheader.html",function () {
+      $(".mtop .mheader span").html("国内折扣");
+      $(".mtop .mheader a").attr("href","inlanddiscount.html")
+    });
+    $(".mfooter").load("footer.html");
+    
+  }
+</script>
+</body>
+</html>

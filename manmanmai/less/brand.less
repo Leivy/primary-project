@@ -1,0 +1,237 @@
+@charset "UTF-8";
+@import "base";
+@import "iconfont";
+@import "header";
+@import "footer";
+
+//三级导航
+.pronav{
+  height: 70 *@rem;
+  line-height: 70 *@rem;
+  padding-left: 20 *@rem;
+  background-color: #5a5a5a;
+  a{
+    color:#fff;
+    .font-size(16);
+  }
+  span{
+    color:#fff;
+    padding:10 *@rem;
+    .font-size(18);
+  }
+}
+//列表
+.rank{
+  //标题
+  .head>h3{
+    height: 60 *@rem;
+    line-height: 60*@rem;
+    color:#874604;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 2px #ddd;
+    background-color: #eee;
+    .font-size(16);
+    padding-left: 20 *@rem;
+  }
+  //品牌
+  .brandrank{
+    li{
+      height: 120 *@rem;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      position: relative;
+      &:before{
+        content: '>';
+        display: block;
+        position: absolute;
+        right: 20 *@rem;
+        top: 50%;
+        .font-size(26);
+        color:#ccc;
+        transform:translateY(-50%);
+
+      }
+    }
+    a{
+      display: block;
+      height: 100%;
+      padding: 20 *@rem;
+    }
+    h3{
+      float: left;
+      width: 50 *@rem;
+      height: 100%;
+      .font-size(18);
+      //font-weight:700;
+      color:#fff;
+      span{
+        display: block;
+        width: 30*@rem;
+        height: 30*@rem;
+        line-height:30 *@rem;
+        background-color: #ccc;
+        text-align: center;
+        margin-top: 20 *@rem;
+      }
+    }
+    li:nth-child(1) h3 span{
+      background-color: red;
+    }
+    li:nth-child(2) h3 span{
+      background-color: @mcolor;
+    }
+    li:nth-child(3) h3 span{
+      background-color: #8fff05;
+    }
+    p{
+      .font-size(16);
+      height: 40*@rem;
+      line-height: 40*@rem;
+    }
+    .txtdetail{
+      color: #9e9e9e;
+    }
+  }
+  //商品
+  .prorank{
+    li{
+      height: 232 *@rem;
+      border-bottom: 1px solid #ccc;
+      position: relative;
+      padding:20 *@rem;
+      background-color: #fff;
+      overflow: hidden;
+      .category div.catCon li a{
+        height: auto;
+      }
+      .pic{
+        position: absolute;
+        top: 20 *@rem;
+        left: 20 *@rem;
+        width: 200 *@rem;
+        height: 100%;
+        img{
+          width: 200*@rem;
+          height: 200*@rem;
+        }
+      }
+      .protxt{
+        height: 100%;
+        margin-left: 220 *@rem;
+        padding-left: 20 *@rem;
+        position: relative;
+        h5{
+          .font-size(14);
+          color:#000;
+          height: 100 *@rem;
+          letter-spacing: 2 *@rem;;
+        }
+        span:nth-child(2){
+          color:red;
+          .font-size(18);
+        }
+        span:nth-child(3){
+          position: absolute;
+          bottom: 10 *@rem;
+          left: 20 *@rem;
+        }
+        span:nth-child(4){
+          position: absolute;
+          bottom: 10 *@rem;
+          right: 0;
+        }
+      }
+    }
+  }
+  //评论
+  .commentrank{
+    li{
+      height: 232 *@rem;
+      border-bottom: 1px solid #ccc;
+      position: relative;
+      padding:20 *@rem;
+      background-color: #fff;
+      overflow: hidden;
+      border-radius: 20 *@rem;
+      .category div.catCon li a{
+        height: auto;
+      }
+      .pic{
+        position: absolute;
+        top: 20 *@rem;
+        left: 20 *@rem;
+        width: 200 *@rem;
+        height: 100%;
+        img{
+          width: 200*@rem;
+          height: 200*@rem;
+        }
+      }
+      .protxt{
+        height: 100%;
+        margin-left: 220 *@rem;
+        padding-left: 20 *@rem;
+        position: relative;
+        h5{
+          .font-size(14);
+          color:#000;
+          height: 100 *@rem;
+          letter-spacing: 2 *@rem;;
+        }
+        span:nth-child(2){
+          color:red;
+          .font-size(18);
+        }
+        span:nth-child(3){
+          position: absolute;
+          bottom: 10 *@rem;
+          left: 20 *@rem;
+        }
+        span:nth-child(4){
+          position: absolute;
+          bottom: 10 *@rem;
+          right: 0;
+        }
+      }
+    }
+  }
+  .commentrank{
+    padding: 20 *@rem;
+    .head{
+      height: 110 *@rem;
+      position: relative;
+      span{
+        position: absolute;
+      }
+      span:nth-child(1){
+        top: 20*@rem;
+        left: 20*@rem;
+      }
+      span:nth-child(2){
+        top: 20*@rem;
+        right: 20*@rem;
+      }
+      span:nth-child(3){
+        bottom: 20*@rem;
+        right: 20*@rem;
+      }
+    }
+    .txt {
+      p{
+        letter-spacing: 2 *@rem;
+        line-height: 200%;
+        padding-bottom:40 *@rem;
+      }
+    }
+  }
+  .comtolink{
+    height:auto!important;
+    padding:0!important;
+    border-radius: 20 *@rem!important;
+    margin-bottom: 10 *@rem;
+  }
+  .commentcolor li{
+    background-color: #f8f8f8 !important;
+  }
+
+}

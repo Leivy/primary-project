@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <!--flexible css初始化 rem布局-->
+  <script src="../lib/flexible/flexible_css.js"></script>
+  <!--flexoible 适配插件-->
+  <script src="../lib/flexible/flexible.js"></script>
+  
+  <!--引入css文件-->
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/moneyctrl.css">
+  
+  <!--引入js文件-->
+  <script src="../lib/art/template.js"></script>
+</head>
+<body>
+<!--顶部通栏-->
+<div class="mtop" id="toTop"></div>
+
+<!--主体商品列表-->
+<div class="money">
+  <ul>
+    <script type="text/html" id="moneyTemp">
+      {{each result as v i}}
+      <li _id="{{v.id}}" data-produtid="{{v.productId}}">
+        <a href="moneyproduct.html?productid={{v.productId}}" class="wrap">
+          <div class="left">
+            {{#v.productImg2}}
+          </div>
+          <div class="right">
+            <h5>{{v.productName}}</h5>
+            <span class="price">{{v.productPinkage}}</span>
+            <p>{{v.productFrom}}|{{v.productTime}}</p>
+            <div class="comment">
+              <i></i>
+              <span>{{v.productComCount}}</span>
+            </div>
+          </div>
+        </a>
+      </li>
+      {{/each}}
+    </script>
+  
+  </ul>
+</div>
+
+
+<!--页面分页-->
+<div class="paging">
+    <div class="pre">
+      <a href="javascript:;">上一页</a>
+    </div>
+    <div class="page">
+      <select name="select" id="select">
+      </select>
+    </div>
+    <div class="next">
+      <a href="javascript:;">下一页</a>
+    </div>
+  </div>
+
+<!--页面底部-->
+<div class="mfooter"></div>
+
+
+<script src="../lib/jquery/jquery-1.12.0.js"></script>
+<script src="../lib/art/template.js"></script>
+<script src="../js/moneyctrl.js"></script>
+<script>
+  window.onload=function () {
+    $(".mtop").load("backheader.html",function () {
+      $(".mtop .mheader span").html("省钱控最新优惠剁手不");
+    });
+    $(".mfooter").load("footer.html");
+  }
+</script>
+</body>
+</html>

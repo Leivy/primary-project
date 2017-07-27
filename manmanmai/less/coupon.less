@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@import "base";
+@import "iconfont";
+@import "backheader";
+@import "footer";
+
+//页面内容
+.coupon{
+  ul{
+    display: flex;
+    justify-content: space-between;
+    padding:10 *@rem;
+  }
+  li{
+    height: 180 *@rem;
+    width: 25%;
+    display: inline-block;
+    text-align: center;
+    a{
+      display: block;
+      width: 80%;
+      height: 100%;
+      border: 1px solid #ccc;
+      padding-top: 30 *@rem;
+    }
+    img{
+      width: 80*@rem;
+      height: 80*@rem;
+      margin: 0 auto;
+    }
+    h5{
+      margin-top: 20 *@rem;
+    }
+  }
+}

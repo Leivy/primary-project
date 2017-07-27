@@ -1,0 +1,33 @@
+@charset "UTF-8";
+@import "base";
+@import "iconfont";
+@import "backheader";
+@import "footer";
+
+.friendlink{
+  li{
+    height: 60 *@rem;
+    width: 50%;
+    margin-bottom: 10 *@rem;
+    a{
+      display: block;
+      height: 100%;
+      line-height: 60 *@rem;
+      margin: 10 *@rem;
+      border: 1px solid #000;
+      position: relative;
+      //margin: 0 auto;
+    }
+    a:nth-child(odd){
+      margin-right: 100 *@rem;
+    }
+    img{
+      height: 60 *@rem;
+      position: absolute;
+    }
+    span{
+      margin-left: 100 *@rem;
+      .font-size(16)
+    }
+  }
+}

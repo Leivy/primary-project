@@ -1,0 +1,74 @@
+@charset "UTF-8";
+@import "base";
+@import "iconfont";
+@import "backheader";
+@import "footer";
+
+//tip样式
+.tips{
+  height: 80 *@rem;
+  p{
+    height: 100%;
+    text-align: center;
+    line-height: 80 *@rem;
+    background-color: #fff;
+  }
+}
+
+//商品列表样式
+.prolist{
+  ul{
+    overflow: hidden;
+  }
+  li{
+    height: 315 *@rem;
+    background-color: #fff;
+    margin-top: 10 *@rem;
+    padding:20 *@rem;
+    position: relative;
+
+
+    img{
+      width: 200 *@rem;
+      height: 160 *@rem;
+    }
+    a{
+      display: block;
+      height: 100%;
+      position: relative;
+    }
+  }
+  .pic{
+    width: 240 *@rem;
+    position: absolute;
+  }
+  .txt{
+    margin-left: 250 *@rem;
+    p:nth-child(1){
+      height: 60 *@rem;
+      overflow : hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    p:nth-child(2){
+      font-weight:700;
+      margin-top: 20 *@rem;
+    }
+    p:nth-child(3){
+      height: 80 *@rem;
+      line-height: 80 *@rem;
+      color: @mcolor;
+    }
+  }
+  li:before{
+    content: '>';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 30 *@rem;
+    transform:translateY(-50%);
+    .font-size(30);
+  }
+}

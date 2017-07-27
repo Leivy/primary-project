@@ -1,0 +1,76 @@
+@charset "UTF-8";
+@import "base";
+@import "iconfont";
+@import "backheader";
+@import "footer";
+
+//标题导航
+#baiTitle{
+  ul{
+    padding:0 10 *@rem;
+    background-color: #fff;
+  }
+  li{
+    width: 160 *@rem;
+    height: 80 *@rem;
+    line-height: 80 *@rem;
+    text-align: center;
+    a{
+      height: 100%;
+      display: block;
+      .font-size(16);
+    }
+
+  }
+  .active a{
+    color:red;
+    border-bottom: 2px solid red;
+  }
+}
+
+//商品列表
+.baiprolist{
+  ul{
+    overflow: hidden;
+  }
+  li{
+    height: 300 *@rem;
+    background-color: #fff;
+    position: relative;
+    padding:20 *@rem;
+    margin-top: 10 *@rem;
+
+
+  }
+  .pic{
+    height: 260 *@rem;
+    width: 280 *@rem;
+    position: absolute;
+
+    img{
+      //height: 100%;
+      width: 100%;
+    }
+  }
+  .txt{
+    margin-left: 300*@rem;
+  }
+}
+
+//回到顶部图标
+.tohead{
+  display: block;
+  width: 60 *@rem;
+  height: 60*@rem;
+  border-radius: 30 *@rem;
+  text-align: center;
+  line-height: 60 *@rem;
+  position: fixed;
+  bottom: 20 *@rem;
+  right: 20 *@rem;
+  background-color: #999;
+  .font-size(18);
+  color:#fff;
+  cursor: pointer;
+  transition: all 1s;
+}

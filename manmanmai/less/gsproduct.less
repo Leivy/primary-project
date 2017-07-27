@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@import "base";
+@import "iconfont";
+@import "backheader";
+@import "footer";
+
+
+//页面头部样式
+
+  .gshead{
+    //height: 60 *@rem;
+    background-color: #fff;
+    .clickbox{
+      display: flex;
+      border-bottom: 1px solid #ccc;
+      div{
+        width: 33.33%;
+        height: 100%;
+        text-align: center;
+        line-height: 60 *@rem;
+        .font-size(16);
+        a{
+          vertical-align: middle;
+        }
+        i{
+          display: inline-block;
+          width: 40*@rem;
+          height: 40*@rem;
+          vertical-align: middle;
+          background: url(../images/up.svg) no-repeat;
+          background-size: 40 *@rem;
+        }
+      }
+    }
+
+    .selectbox{
+
+      li{
+        width: 100%;
+        height: 60 *@rem;
+        background-color: #fff;
+        border-bottom: 1px solid #ccc;
+        line-height: 60 *@rem;
+        .font-size(16);
+        padding-left: 20 *@rem;
+        position: relative;
+      }
+      li.active:before{
+        content: '';
+        display: block;
+        width: 30 *@rem;
+        height: 30 *@rem;
+        background: url(../images/ok.svg) no-repeat center;
+        background-size:30 *@rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+//页面商品列表部分
+.gsbody{
+  li{
+    width: 50%;
+    height: 400 *@rem;
+    margin-bottom: 10 *@rem;
+    overflow: hidden;
+  }
+  a{
+    display: block;
+    height: 100%;
+    margin: 10 *@rem;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 15 *@rem;
+    position: relative;
+
+  }
+  img{
+    width: 230*@rem;
+    height: 230*@rem;
+    margin: 10 *@rem auto;
+  }
+  p{
+    height: 80 *@rem;
+    line-height: 80 *@rem;
+  }
+  h5{
+    color:red;
+    .font-size(16)
+  }
+  .more{
+    width: 126*@rem;
+    height: 60*@rem;
+    line-height: 60 *@rem;
+    background-color: @mcolor;
+    position: absolute;
+    bottom: 20 *@rem;
+    right: 20 *@rem;
+    text-align: center;
+    border-radius:10 *@rem;
+    color:#fff;
+  }
+
+}

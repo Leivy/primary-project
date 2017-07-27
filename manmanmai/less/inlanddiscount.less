@@ -1,0 +1,40 @@
+@charset "UTF-8";
+@import "base";
+@import "iconfont";
+@import "backheader";
+@import "footer";
+
+//页面内容
+.inland{
+  ul{
+
+  }
+  li{
+    width: 50%;
+    height: 480*@rem;
+    padding:20 *@rem;
+    background-color: #fff;
+    overflow: hidden;
+  }
+  .pic{
+    img{
+      width: 300*@rem;
+      height: 300*@rem;
+      margin: 0 auto;
+    }
+  }
+  .txt{
+    h5{
+      .font-size(14);
+      font-weight:700;
+      margin: 10 *@rem;
+    }
+    p:nth-child(2){
+      color: @mcolor;
+    }
+    p:nth-child(3){
+      color:@font-color;
+      margin-top: 10 *@rem;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@charset "UTF-8";
+@import "base";
+@import "iconfont";
+@import "header";
+@import "footer";
+
+//页面身体
+.category{
+  //height: 500 *@rem;
+  padding:10 *@rem;
+  ul.box{
+    border-radius:5 *@rem;
+    overflow: hidden;
+  }
+  li.content{
+
+  }
+  div.catHead{
+    height: 76 *@rem;
+    line-height: 76 *@rem;
+    background-color: #eee;
+    padding-left:20 *@rem;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+    a{
+
+      color:#000;
+      .font-size(16);
+      font-weight: 700;
+      letter-spacing: 3 *@rem;
+    }
+  }
+  div.catCon{
+    display: none;
+    //transition: all 1s;
+    ul{
+      width: 100%;
+      height: 100%;
+      border-left: 1px solid #ccc;
+    }
+    li{
+      height: 76 *@rem;
+      line-height:76 *@rem;
+      width: 33.3%;
+      border-right: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+      a{
+        width: 100%;
+        //height: 100px;
+        display: block;
+      }
+    }
+  }
+}
+

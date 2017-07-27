@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <!--flexible css初始化 rem布局-->
+  <script src="../lib/flexible/flexible_css.js"></script>
+  <!--flexoible 适配插件-->
+  <script src="../lib/flexible/flexible.js"></script>
+  
+  <!--引入css文件-->
+  <link rel="stylesheet" href="../css/couponproduct.css">
+  
+  <!--引入js文件-->
+  <script src="../lib/art/template.js"></script>
+</head>
+<body>
+<!--顶部返回栏-->
+<div class="mtop" id="toTop"></div>
+
+<!--页面内容-->
+<div class="coupro">
+  <div class="tips">
+    <p>--点餐前出示手机中的优惠券，即可享受优惠--</p>
+  </div>
+  <div class="prolist">
+    <ul>
+      <script type="text/html" id="couproTemp">
+        {{each result as v i}}
+        <li>
+          <a href="javascript:;">
+            <div class="pic">
+              {{#v.couponProductImg}}
+            </div>
+            <div class="txt">
+              <p>{{v.couponProductName}}</p>
+              <p>{{v.couponProductPrice}}</p>
+              <p>{{v.couponProductTime}}</p>
+            </div>
+          </a>
+        </li>
+        {{/each}}
+</script>
+    </ul>
+  </div>
+</div>
+
+
+<!--页面底部-->
+<div class="mfooter"></div>
+
+<script src="../lib/jquery/jquery-1.12.0.js"></script>
+<script src="../lib/art/template.js"></script>
+<script src="../js/couponproduct.js"></script>
+<script>
+
+</script>
+</body>
+</html>

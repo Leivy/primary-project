@@ -1,0 +1,54 @@
+@charset "UTF-8";
+.mtop{
+  height: 198*@rem;
+  //页面最顶部
+  .mheader{
+    height: 98 *@rem;
+    background-color: @mcolor;
+    a{
+      display: block;
+      height: 100%;
+      padding: 22 *@rem 30 *@rem;;
+      img{
+        height: 100%;
+      }
+    }
+  }
+  //搜索栏
+  .msearch{
+    padding: 20 *@rem;
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    .txt{
+      height: 60 *@rem;
+      //margin-right: 140 *@rem;
+      input{
+        width: 100%;
+        height: 100%;
+        border-radius: 30 *@rem;
+        .font-size(16);
+        padding-left: 20 *@rem;
+        background-color: #f1f1f1;
+      }
+
+    }
+    .btn{
+      position: absolute;
+      right: 20 *@rem;
+      top: 20 *@rem;
+      width: 126 *@rem;
+      height: 60 *@rem;
+      input{
+        width: 100%;
+        height: 100%;
+        border-radius: 30 *@rem;
+        .font-size(16);
+        color:#fff;
+        background-color: @mcolor;
+        cursor:pointer;
+      }
+
+    }
+  }
+}

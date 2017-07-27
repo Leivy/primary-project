@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@import "base";
+@import "iconfont";
+@import "header";
+@import "footer";
+
+//title
+.catlist{
+
+}
+.pronav{
+  height: 70 *@rem;
+  line-height: 70 *@rem;
+  padding-left: 20 *@rem;
+  background-color: #5a5a5a;
+  a{
+    color:#fff;
+    .font-size(16);
+  }
+  span{
+    color:#fff;
+    padding:10 *@rem;
+    .font-size(18);
+  }
+}
+//content
+.prolist{
+  li{
+    height: 232 *@rem;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    padding:20 *@rem;
+    background-color: #fff;
+    overflow: hidden;
+    .category div.catCon li a{
+      height: auto;
+    }
+    .pic{
+      position: absolute;
+      top: 20 *@rem;
+      left: 20 *@rem;
+      width: 200 *@rem;
+      height: 100%;
+      img{
+        width: 200*@rem;
+        height: 200*@rem;
+      }
+    }
+    .protxt{
+      height: 100%;
+      margin-left: 220 *@rem;
+      padding-left: 20 *@rem;
+      position: relative;
+      h5{
+        .font-size(14);
+        color:#000;
+        height: 100 *@rem;
+        letter-spacing: 2 *@rem;;
+      }
+      span:nth-child(2){
+        color:red;
+        .font-size(18);
+      }
+      span:nth-child(3){
+        position: absolute;
+        bottom: 10 *@rem;
+        left: 20 *@rem;
+      }
+      span:nth-child(4){
+        position: absolute;
+        bottom: 10 *@rem;
+        right: 0;
+      }
+    }
+  }
+}
+
+//页面分页
+.paging{
+  height: 90 *@rem;
+  line-height: 90 *@rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding:20 *@rem 10 *@rem;
+  .page{
+    width: 33.33%;
+    display: flex;
+    select{
+      margin:  auto;
+      width: 150 *@rem;
+      height: 100%;
+      .font-size(16);
+    }
+  }
+  .pre,
+  .next{
+    height: 50 *@rem ;
+    width: 33.33%;
+    background:linear-gradient(to bottom, #f1f1f1, #d4d4d4);
+    text-align: center;
+    line-height: 50 *@rem;
+    border-radius:5 *@rem;
+    .font-size(14);
+}
+}

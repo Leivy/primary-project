@@ -1,0 +1,47 @@
+@charset "UTF-8";
+//页面底部
+.mfooter{
+  height: 185 *@rem;
+  margin: 10 *@rem;
+  .top{
+    height: 62 *@rem;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    a{
+      display: block;
+      float: left;
+      width: 33.3%;
+      text-align: center;
+      line-height: 62 *@rem;
+      position: relative;
+      .font-size(16);
+    }
+    a:not(:last-child){
+      border-right: 1px solid #ccc;
+    }
+    img{
+      display: inline-block;
+      width: 30*@rem;
+      height: 30*@rem;
+      vertical-align: middle;
+      margin-right: 10 *@rem;
+    }
+  }
+  .bottom{
+    text-align: center;
+    height: 123 *@rem;
+    padding: 35 *@rem;
+    line-height: 20 *@rem;
+    .txt{
+      a:nth-child(1){
+        color:red;
+      }
+      a:nth-child(2){
+        color:#000;
+      }
+      a:nth-child(3){
+        color:@font-color;
+      }
+    }
+  }
+}

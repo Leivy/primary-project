@@ -1,0 +1,356 @@
+@charset "UTF-8";
+html {
+  background: #fff;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html * {
+  outline: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  background: #f7f7f7;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  /*在移动端特殊的设置*/
+}
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+del {
+  text-decoration: line-through;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 500;
+}
+ol,
+ul {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 500;
+}
+ins,
+a {
+  color: #5a5a5a;
+  text-decoration: none;
+}
+a:hover {
+  color: #5a5a5a;
+  text-decoration: none;
+}
+input,
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  /*特殊的属性定义  清除浏览器给input自带的样式*/
+  -webkit-appearance: none;
+  /*组件默认的样式空*/
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after,
+.clearfix::before {
+  content: ".";
+  line-height: 0;
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+img {
+  display: block;
+}
+li {
+  list-style: none;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+/*------------- S 字体图标库 ----------------*/
+@font-face {
+  font-family: "miconfont";
+  src: url('../font/miconfont.eot?t=1480476053297');
+  /* IE9*/
+  src: url('../font/miconfont.eot?t=1480476053297#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../font/miconfont.woff?t=1480476053297') format('woff'), /* chrome, firefox */ url('../font/miconfont.ttf?t=1480476053297') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../font/miconfont.svg?t=1480476053297#miconfont') format('svg');
+  /* iOS 4.1- */
+}
+.micon {
+  font-family: "miconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.micon-xiangxiajiantou:before {
+  content: "\e65e";
+}
+.micon-xiangyoujiantou:before {
+  content: "\e65f";
+}
+/*------------- E 字体图标库 ----------------*/
+.mtop {
+  height: 1.306634rem;
+}
+.mtop .mheader {
+  height: 1.306634rem;
+  line-height: 1.306634rem;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #ff841d;
+}
+[data-dpr='2'] .mtop .mheader {
+  font-size: 40px;
+}
+[data-dpr="3"] .mtop .mheader {
+  font-size: 60px;
+}
+.mtop .mheader a {
+  display: block;
+  height: 100%;
+  padding: 0.293326rem 0.39999rem;
+}
+.mtop .mheader a img {
+  height: 100%;
+  width: 100%;
+}
+.mtop .mheader a .app {
+  height: 100%;
+  width: auto;
+}
+.mfooter {
+  height: 2.466605rem;
+  margin: 0.13333rem;
+}
+.mfooter .top {
+  height: 0.826646rem;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.mfooter .top a {
+  display: block;
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  line-height: 0.826646rem;
+  position: relative;
+  font-size: 16px;
+}
+[data-dpr='2'] .mfooter .top a {
+  font-size: 32px;
+}
+[data-dpr="3"] .mfooter .top a {
+  font-size: 48px;
+}
+.mfooter .top a:not(:last-child) {
+  border-right: 1px solid #ccc;
+}
+.mfooter .top img {
+  display: inline-block;
+  width: 0.39999rem;
+  height: 0.39999rem;
+  vertical-align: middle;
+  margin-right: 0.13333rem;
+}
+.mfooter .bottom {
+  text-align: center;
+  height: 1.639959rem;
+  padding: 0.466655rem;
+  line-height: 0.26666rem;
+}
+.mfooter .bottom .txt a:nth-child(1) {
+  color: red;
+}
+.mfooter .bottom .txt a:nth-child(2) {
+  color: #000;
+}
+.mfooter .bottom .txt a:nth-child(3) {
+  color: #5a5a5a;
+}
+.gshead {
+  background-color: #fff;
+}
+.gshead .clickbox {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.gshead .clickbox div {
+  width: 33.33%;
+  height: 100%;
+  text-align: center;
+  line-height: 0.79998rem;
+  font-size: 16px;
+}
+[data-dpr='2'] .gshead .clickbox div {
+  font-size: 32px;
+}
+[data-dpr="3"] .gshead .clickbox div {
+  font-size: 48px;
+}
+.gshead .clickbox div a {
+  vertical-align: middle;
+}
+.gshead .clickbox div i {
+  display: inline-block;
+  width: 0.53332rem;
+  height: 0.53332rem;
+  vertical-align: middle;
+  background: url(../images/up.svg) no-repeat;
+  background-size: 0.53332rem;
+}
+.gshead .selectbox li {
+  width: 100%;
+  height: 0.79998rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  line-height: 0.79998rem;
+  font-size: 16px;
+  padding-left: 0.26666rem;
+  position: relative;
+}
+[data-dpr='2'] .gshead .selectbox li {
+  font-size: 32px;
+}
+[data-dpr="3"] .gshead .selectbox li {
+  font-size: 48px;
+}
+.gshead .selectbox li.active:before {
+  content: '';
+  display: block;
+  width: 0.39999rem;
+  height: 0.39999rem;
+  background: url(../images/ok.svg) no-repeat center;
+  background-size: 0.39999rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.gsbody li {
+  width: 50%;
+  height: 5.3332rem;
+  margin-bottom: 0.13333rem;
+  overflow: hidden;
+}
+.gsbody a {
+  display: block;
+  height: 100%;
+  margin: 0.13333rem;
+  background-color: #fff;
+  overflow: hidden;
+  padding: 0.199995rem;
+  position: relative;
+}
+.gsbody img {
+  width: 3.06659rem;
+  height: 3.06659rem;
+  margin: 0.13333rem auto;
+}
+.gsbody p {
+  height: 1.06664rem;
+  line-height: 1.06664rem;
+}
+.gsbody h5 {
+  color: red;
+  font-size: 16px;
+}
+[data-dpr='2'] .gsbody h5 {
+  font-size: 32px;
+}
+[data-dpr="3"] .gsbody h5 {
+  font-size: 48px;
+}
+.gsbody .more {
+  width: 1.679958rem;
+  height: 0.79998rem;
+  line-height: 0.79998rem;
+  background-color: #ff841d;
+  position: absolute;
+  bottom: 0.26666rem;
+  right: 0.26666rem;
+  text-align: center;
+  border-radius: 0.13333rem;
+  color: #fff;
+}

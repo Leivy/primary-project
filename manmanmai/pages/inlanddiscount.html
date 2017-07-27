@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <!--flexible css初始化 rem布局-->
+  <script src="../lib/flexible/flexible_css.js"></script>
+  <!--flexoible 适配插件-->
+  <script src="../lib/flexible/flexible.js"></script>
+  
+  <!--引入css文件-->
+  <link rel="stylesheet" href="../css/inlanddiscount.css">
+  
+  <!--引入js文件-->
+  <script src="../lib/art/template.js"></script>
+</head>
+<body>
+<!--顶部返回栏-->
+<div class="mtop" id="toTop"></div>
+
+<!--页面内容-->
+<div class="inland">
+  <ul class="clearfix">
+    
+    <script type="text/html" id="inland">
+      {{each result as v i}}
+      <li class="fl">
+        <a href="inlandproduct.html?productid={{v.productId}}">
+          <div class="pic">{{#v.productImg}}</div>
+          <div class="txt">
+            <h5>{{v.productName}}</h5>
+            <p>{{v.productPrice}}</p>
+            <p>{{v.productFrom}}|{{v.productTime}}</p>
+          </div>
+        </a>
+      </li>
+      {{/each}}
+    </script>
+    
+  </ul>
+</div>
+
+
+<!--页面底部-->
+<div class="mfooter"></div>
+
+<script src="../lib/jquery/jquery-1.12.0.js"></script>
+<script src="../lib/art/template.js"></script>
+<script src="../js/inlanddiscount.js"></script>
+<script>
+  window.onload=function () {
+    $(".mtop").load("backheader.html",function () {
+      $(".mtop .mheader span").html("国内折扣");
+    });
+    $(".mfooter").load("footer.html");
+    
+  }
+</script>
+</body>
+</html>

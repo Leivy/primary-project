@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <!--<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+  <title>zyindex</title>
+  
+  <!--flexible css初始化 rem布局-->
+  <script src="../lib/flexible/flexible_css.js"></script>
+  <!--flexoible 适配插件-->
+  <script src="../lib/flexible/flexible.js"></script>
+  
+  <!--引入css文件-->
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/index.css">
+  
+  <!--引入js文件-->
+  <script src="../lib/art/template.js"></script>
+
+</head>
+<body>
+<!--顶部通栏与搜索框-->
+<div class="mtop" id="toTop">
+
+</div>
+
+<!--导航栏-->
+<div class="mnav clearfix">
+  <ul class="clearfix">
+  
+    <script type="text/html" id="mnavTemp">
+      
+      {{each result as v i}}
+      <li _id="{{v._id}}" indexmenuId="{{v.indexmenuId}}" class="fl">
+        <a href="{{v.titlehref}}">
+          {{#v.img}}
+          <p>{{v.name}}</p>
+        </a>
+      </li>
+      {{/each}}
+     
+    </script>
+    
+  </ul>
+</div>
+
+<!--超值折扣推荐 产品列表-->
+<section class="mpro">
+  <!--头部-->
+  <header class="clearfix">
+    <a href="inlanddiscount.html" class="fl"><h3>超值折扣推荐</h3></a>
+    <a href="inlanddiscount.html" class="fr"><img src="./images/more.png" alt=""></a>
+  </header>
+  <!--身体-->
+  <div class="proList">
+    <ul>
+      <script type="text/html" id="prolistTemp">
+        {{each result as v i}}
+        <li _id="{{v.id}}">
+          <a href="moneyproduct.html?productid={{v.productId}}">
+            <div class="left">
+              {{#v.productImg2}}
+            </div>
+            <div class="right">
+              <h5>{{v.productName}}</h5>
+              <span class="price">{{v.productPinkage}}</span>
+              <p>{{v.productFrom}}|{{v.productTime}}</p>
+              <div class="comment">
+                <i></i>
+                <span>{{v.productComCount}}</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        {{/each}}
+      </script>
+      
+    </ul>
+  </div>
+</section>
+
+<!--更多优惠-->
+<section class="mmore">
+  <a href="moneyctrl.html">更多优惠信息>></a>
+</section>
+
+<!--品牌排行-->
+<section class="mbrand">
+  <a href="brandTitle.html">
+    <h3>品牌排行</h3>
+    <img src="../images/more.png" alt="">
+  </a>
+</section>
+
+<!--页面底部-->
+<section class="mfooter">
+
+</section>
+
+
+<script src="../lib/jquery/jquery-1.12.0.js"></script>
+<script src="../lib/art/template.js"></script>
+<script src="../js/index.js"></script>
+<script>
+  window.onload=function () {
+    $(".mtop").load("header.html");
+    $(".mfooter").load("footer.html");
+  }
+</script>
+</body>
+</html>
